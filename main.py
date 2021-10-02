@@ -49,7 +49,6 @@ class Game():
         self.draw_grid()
         for sprite in self.all_sprites:
             self.screen.blit(sprite.image, self.camera.apply(sprite))
-        # print(f'blitted by {self.camera.camera.topleft}')
         pg.display.flip()
 
     def draw_grid(self):

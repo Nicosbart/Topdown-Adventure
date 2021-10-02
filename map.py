@@ -31,12 +31,6 @@ class Camera():
     def update(self, player):
         x, y = self.camera.topleft
 
-        print(f'player x, y: {player.pos.x}, {player.pos.y}')
-        print(f'player rect l, r: {player.rect.left}, {player.rect.right}')
-        print(f'left/right: {self.left}, {self.right}')
-        print(f'camera left, right: {self.camera.left}, {self.camera.right}')
-        print()
-
         if player.rect.right >= self.right and player.vel.x > 0:
             x -= self.width
             self.left += self.width
